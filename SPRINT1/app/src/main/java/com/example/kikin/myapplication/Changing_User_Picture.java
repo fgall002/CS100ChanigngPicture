@@ -23,9 +23,8 @@ public class Changing_User_Picture extends AppCompatActivity implements View.OnC
     Uri getImageUrl;
     private static final String TAG = "Updated";
     private static final int RESULT_LOAD_IMAGE = 1;
-    ImageView imageToUpload, downloadImage;
-    Button bUploadImage, bDownloadImage,bConfirmImage;
-    EditText uploadImageName, downloadImageName;
+    ImageView imageToUpload;
+    Button bUploadImage,bConfirmImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,26 +32,19 @@ public class Changing_User_Picture extends AppCompatActivity implements View.OnC
         setContentView(R.layout.activity_changing__user__picture);
 
         imageToUpload = (ImageView) findViewById(R.id.imageToUpload);
-//        downloadImage = (ImageView) findViewById(R.id.downloadImage);
 
         bUploadImage = (Button) findViewById(R.id.bUploadImage);
         bConfirmImage= (Button) findViewById(R.id.bConfirmImage);
 
-//        bDownloadImage = (Button) findViewById(R.id.bDownloadImage);
 
-        //    uploadImageName = (EditText) findViewById(R.id.etUploadName);
-//        downloadImageName = (EditText) findViewById(R.id.etDownloadName);
 
         imageToUpload.setOnClickListener(this);
         bUploadImage.setOnClickListener(this);
-//        bDownloadImage.setOnClickListener(this);
     }
     @Override
     public void onClick(View v){
         switch(v.getId()){
             case R.id.imageToUpload:
-//                Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-//                startActivityForResult(galleryIntent,RESULT_LOAD_IMAGE);
                 break;
             case R.id.bUploadImage:
                 Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
